@@ -18,7 +18,7 @@ public class PlayerEntityMixin {
 		at = @At("TAIL")
 	)
 	private void initDataTrackerMixin(DataTracker.Builder builder, CallbackInfo ci) {
-		builder.add(ThirstUtil.INSTANCE.getTHIRSTY(), 20);
+		builder.add(ThirstUtil.INSTANCE.getTHIRSTY(), ThirstUtil.INSTANCE.getMAX_THIRST());
 	}
 
 	@Inject(

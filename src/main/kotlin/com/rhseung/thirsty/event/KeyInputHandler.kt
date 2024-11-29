@@ -24,6 +24,4 @@ object KeyInputHandler {
             }
         }
     }
-
-    fun initialize() {}
 }

@@ -8,6 +8,7 @@ object ThirstUtil {
     fun initialize() {}
 
     val THIRSTY = DataTracker.registerData(PlayerEntity::class.java, TrackedDataHandlerRegistry.INTEGER);
+    val MAX_THIRST = 10;
 
     fun getThirst(player: PlayerEntity): Int {
         return player.dataTracker.get(THIRSTY);
@@ -18,10 +19,10 @@ object ThirstUtil {
     }
 
     fun addThirst(player: PlayerEntity, amount: Int) {
-        setThirst(player, (getThirst(player) + amount).coerceIn(0, 20));
+        setThirst(player, (getThirst(player) + amount).coerceIn(0, MAX_THIRST));
     }
 
     fun removeThirst(player: PlayerEntity, amount: Int) {
-        setThirst(player, (getThirst(player) - amount).coerceIn(0, 20));
+        setThirst(player, (getThirst(player) - amount).coerceIn(0, MAX_THIRST));
     }
 }
