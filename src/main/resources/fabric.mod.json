@@ -26,6 +26,12 @@
 				"value": "com.rhseung.thirsty.ThirstyDataGenerator",
 				"adapter": "kotlin"
 			}
+		],
+		"client": [
+			{
+				"value": "com.rhseung.thirsty.ThirstyClient",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
